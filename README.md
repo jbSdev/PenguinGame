@@ -11,6 +11,7 @@ The games is based on "It's my fish!", and made as a semestral group project for
  - **Placement** - first action of the game, placing the player on the best possible spot
  - **Movement**  - repeatable action - moving to the next best spot
  - **GUI**       - User Interface
+
 All of the directories have their own .md file, which explains in detail inner workings of the parts
 
 
