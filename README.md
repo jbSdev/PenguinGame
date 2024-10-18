@@ -7,10 +7,11 @@ Game made by Antoni Jesień, Aleksander Jędrzejowski and Balcı Ali Çağan
 The games is based on "It's my fish!", and made as a semestral group project for EPFU on CS I semester at WUT, [Poland](https://www.youtube.com/watch?v=s9PzYuVwCSE).
 
 ### File structure:
- - <b>Board<\b>     - board generation
- - <b>Placement<\b> - first action of the game, placing the player on the best possible spot
- - <b>Movement<\b>  - repeatable action - moving to the next best spot
- - <b>GUI<\b>       - User Interface
+ - **Board**     - board generation
+ - **Placement** - first action of the game, placing the player on the best possible spot
+ - **Movement**  - repeatable action - moving to the next best spot
+ - **GUI**       - User Interface
+All of the directories have their own .md file, which explains in detail inner workings of the parts
 
 
 ### To do:
@@ -35,5 +36,6 @@ The games is based on "It's my fish!", and made as a semestral group project for
  - [ ] Simple & basic prototype
  - [ ] Incorporating all of the tinkering features into UI
 
-<b>Additionally:<\b>
+**Additionally:**
 All of the moves need to have interactive and autonomous mode.
+ 
