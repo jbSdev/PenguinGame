@@ -27,7 +27,7 @@ void generate_board()
     {
         for (x = 0; x < size_x; x++)
             perlin_gen(x, y, size_x, size_y, SEED) > 0.1
-                ? fprintf(file_out, "1 ")
+                ? fprintf(file_out, "2 ")
                 : fprintf(file_out, "0 ");
 
         fputs("\n", file_out);
