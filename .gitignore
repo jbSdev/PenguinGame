@@ -1,3 +1,10 @@
+# Filetypes
+*.o
 *.out
+
+# Folders
+build
+
+# Files
 board.txt
 game

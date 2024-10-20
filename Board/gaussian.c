@@ -1,4 +1,5 @@
 #include <math.h>
+#include "board_functions.h"
 
 float gaussian(int x, int y, int size_x, int size_y)
 {

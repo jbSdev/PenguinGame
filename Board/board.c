@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "perlin_gen.h"
+#include "board_functions.h"
 
 void generate_board()
 {

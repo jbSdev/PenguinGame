@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "gaussian.h"
+#include "board_functions.h"
 
 static int SEED = 0;
 
