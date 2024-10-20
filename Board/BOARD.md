@@ -1,4 +1,4 @@
-# Board
+#Board
 
 The main board generation file is `board.c`. It has three main functions:
  - `generate_board()`

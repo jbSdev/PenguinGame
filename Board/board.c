@@ -1,5 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "board_functions.h"
+
+void print_board()
+{
+    FILE* file_in;
+    file_in = fopen("board.txt", "r");
+
+    int size_x, size_y;
+    fscanf(file_in, "%d %d", &size_x, &size_y);
+
+    for (int i = 0; i < size_x * size_y; i++)
+        printf("%c", fgetc(file_in));
+}
 
 void generate_board()
 {
@@ -27,19 +40,17 @@ void generate_board()
     {
         for (x = 0; x < size_x; x++)
             perlin_gen(x, y, size_x, size_y, SEED) > 0.1
-                ? fprintf(file_out, "2 ")
-                : fprintf(file_out, "0 ");
+                ? fprintf(file_out, "%d", rand() % 3 + 1)      // Number of fish - from 1 to 3
+                : fprintf(file_out, "0");
 
-        fputs("\n", file_out);
+        if (y != size_y - 1)
+            fputs("\n", file_out);
     }
     printf("Board generated!\n");
+    fclose(file_out);
 }
 
-void update_board()
+void update_board(char move[2])
 {
-    FILE* file_in;
-    file_in = fopen("board.txt", "r");
-    // Input size of the board
-    int size_x, size_y;
-    fscanf(file_in, "%d %d", &size_x, &size_y);
+    move_player(move[0], move[1]);
 }

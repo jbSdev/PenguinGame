@@ -20,6 +20,7 @@ set(SOURCES
     Board/board.c
     Board/gaussian.c
     Board/perlin_gen.c
+    Board/move_player.c
 )
 
 # Add executable target
