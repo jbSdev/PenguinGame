@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+#include "gaussian.h"
 
 static int SEED = 0;
 
@@ -66,49 +66,7 @@ float perlin2d(float x, float y, float freq, int depth)
     return fin/div;
 }
 
-float gaussian(int x, int y, int size_x, int size_y)
-{
-    float e  = 2.71828;
-    float a  = 0.4;          // Tweakable
-    float pi = 3.14159;
-    // Returning this function: https://www.desmos.com/3d/ne7zzbm3td
-    float fraq_x = fabsf(x - ( (float)size_x / 2 )) / ((float)size_x / 2);       // Distance from the center on X axes -> (0, 1)
-    float fraq_y = fabsf(y - ( (float)size_y / 2 )) / ((float)size_y / 2);       // Distance from the center on Y axes -> (0, 1)
-
-    float exponent = ( -1 * (pow(fraq_x, 2) + (pow(fraq_y, 2)) ) ) / (2 * a * a);
-
-    return pow(e, exponent) / sqrt(2 * pi * a * a);                             // Value between (0, 1)
-}
-
-/*
- * int main(int argc, char *argv[])
- * {
- *     int size_x, size_y;
- *     printf("Insert the map size - X and Y:\t");
- *     scanf("%d %d", &size_x, &size_y);
- * 
- *     printf("Insert the SEED:\t");
- *     scanf("%d", &SEED);
- * 
- *     int x, y;
- *     float out;
- *     for (y = 0; y < size_y; y++)
- *     {
- *         for (x = 0; x < size_x; x++)
- *         {
- *             float weight = gaussian(x, y, size_x, size_y);
- * 
- *             out = perlin2d(x, y, 0.3, 1) * weight;      // Tweak with freq and depth
- * 
- *             if (out > 0.1)                             // Tweak edge value
- *                 printf("\x1b[36m@ ");
- *             else
- *                 printf("\x1b[31m@ ");
- *         }
- *         printf("\n");
- *     }
- * }
- */
+/********************************************************************/
 
 float perlin_gen(int x, int y, int size_x, int size_y, int seed_input)
 {
