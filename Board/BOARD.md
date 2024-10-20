@@ -1,6 +1,6 @@
 # Board
 
-The main board generation file is `board.h`. It has three main functions:
+The main board generation file is `board.c`. It has three main functions:
  - `generate_board()`
  - `update_board()`
  - `print_board()`

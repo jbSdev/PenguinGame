@@ -1,4 +1,4 @@
-#include "Board/board.h"
+#include "Board/board_functions.h"
 
 int main()
 {
