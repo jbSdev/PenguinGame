@@ -36,7 +36,7 @@ The size of the board is not advised to be over 50x50, because the lakes in the 
 
 **`update_board()`** moves a player on the board and saves the status of the game into `board.txt`.
 
-It takes input consisting of two characters (separately), and moves a player accordingly. First character corresponds to a player [A...Z], second character corresponds to a direction of the movement [U - up, D - down, L - left, R - right].
+It takes input consisting of two characters (as a string), and moves a player accordingly. First character corresponds to a player [A...Z], second character corresponds to a direction of the movement [U - up, D - down, L - left, R - right].
 
 If the player is trying to move into the sea, the state of the game will not change and the message will appear: *Player X tried to move out of the map.*
 
