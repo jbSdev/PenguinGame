@@ -9,6 +9,7 @@ void move_player(char player, char direction);
 void generate_board();
 void update_board(char move[2]);
 void print_board();
+void save_board(char *board, int size_x, int size_y);
 
 struct Player
 {

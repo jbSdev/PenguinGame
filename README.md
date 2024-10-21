@@ -14,12 +14,26 @@ The games is based on "It's my fish!", and made as a semestral group project for
 
 All of the directories have their own .md file, which explains in detail inner workings of the parts
 
+The project is compiled using CMake (> 3.10). To run:
+
+Start from main project directory
+
+```
+mkdir build             // Creates a build/ folder
+
+cmake -S . -B build     // Configures CMake to use the build/ folder while sourcing files from main project directory
+
+make -C build           // Compiles the project into `game` file
+```
+
+----
 
 ### To do:
 
 ##### Board
  - [x] Basic board generation
- - [ ] Fish spawning
+ - [x] Fish spawning
+ - [ ] Updating the board after player moves
  - [ ] Allowing user to tinker with internal values
 
 ##### Placement

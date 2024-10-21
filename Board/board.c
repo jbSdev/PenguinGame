@@ -14,6 +14,21 @@ void print_board()
         printf("%c", fgetc(file_in));
 }
 
+void save_board(char *board, int size_x, int size_y)
+{
+    FILE* file;
+    file = fopen("board.txt", "w");
+    fprintf(file, "%d %d\n", size_x, size_y);
+    for (int y = 0; y < size_y; y++)
+    {
+        for (int x = 0; x < size_x; x++)
+            fprintf(file, "%c", *((board + x * size_y) + y));
+        if (y != size_y)
+            fprintf(file, "\n");
+    } 
+    fclose(file);
+}
+
 void generate_board()
 {
     // Input board size and generation seed
