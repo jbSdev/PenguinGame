@@ -64,8 +64,3 @@ void generate_board()
     printf("Board generated!\n");
     fclose(file_out);
 }
-
-void update_board(char move[2])
-{
-    move_player(move[0], move[1]);
-}

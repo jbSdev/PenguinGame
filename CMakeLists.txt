@@ -21,6 +21,9 @@ set(SOURCES
     Board/gaussian.c
     Board/perlin_gen.c
     Board/move_player.c
+
+    Placement/heat_based.c
+    Placement/place_player.c
 )
 
 # Add executable target
