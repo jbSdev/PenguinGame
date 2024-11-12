@@ -24,6 +24,9 @@ set(SOURCES
 
     Placement/heat_based.c
     Placement/place_player.c
+
+    GUI/autonomous.c
+    GUI/interactive.c
 )
 
 # Add executable target

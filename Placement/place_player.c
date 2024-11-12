@@ -1,7 +1,7 @@
 #include "placement.h"
 #include <stdio.h>
 
-void place_player(char Player, int player_x, int player_y)
+int place_player(char Player, int player_x, int player_y)
 {
     FILE* file;
     file = fopen("board.txt", "r");
@@ -16,6 +16,13 @@ void place_player(char Player, int player_x, int player_y)
         fgetc(file);
     }
     fclose(file);
+
+    // The penguins can be only placed on a tile with 1 fish
+    if (board[player_x][player_y] != '1')
+    {
+        printf("The penguin has to be placed on a tile with only 1 fish. Please retry.\n");
+        return 0;
+    }
     
     file = fopen("board.txt", "w");
     fprintf(file, "%d %d\n", size_x, size_y);
@@ -31,4 +38,5 @@ void place_player(char Player, int player_x, int player_y)
             fprintf(file, "\n");
     } 
     fclose(file);
+    return 1;
 }

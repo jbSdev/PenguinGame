@@ -33,7 +33,7 @@ float calculate_heat(int rel_x, int rel_y, char board[size_x][size_y])
             // fish / 3 -> this way 3 fish have weight of 1, 2 = 0.67 and 1 =  0.33
             // And get the mean of them all
             fish = board[x][y];
-            if (board[rel_x][rel_y] == '0')
+            if (board[rel_x][rel_y] != '1')         // Penguin has to be placed on a tile with 1 fish
                 return 0;
             switch (fish)
             {

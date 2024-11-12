@@ -9,6 +9,6 @@ struct BestPlace
 
 struct BestPlace heat_placement();
 
-void place_player(char Player, int player_x, int player_y);
+int place_player(char Player, int player_x, int player_y);
 
 #endif

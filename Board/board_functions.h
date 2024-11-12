@@ -4,7 +4,8 @@
 float gaussian(int x, int y, int size_x, int size_y);
 float perlin_gen(int x, int y, int size_x, int size_y, int seed_input);
 
-void move_player(char player, char direction);
+int move_player(char player, char direction);
+int is_movable(char player);
 
 void generate_board();
 void print_board();

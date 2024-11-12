@@ -8,10 +8,39 @@ void print_board()
     file_in = fopen("board.txt", "r");
 
     int size_x, size_y;
+    char input;
     fscanf(file_in, "%d %d", &size_x, &size_y);
+    fgetc(file_in);
 
-    for (int i = 0; i < size_x * size_y; i++)
-        printf("%c", fgetc(file_in));
+    // Board printing
+    // First line with the coordinates of x
+    printf("   ");
+    for (int x = 0; x < size_x; x++)
+        printf("%-3d", x+1);
+    printf("\n");
+    
+    for (int y = 0; y < size_y; y++)
+    {
+        // Coordinates of y
+        printf("%-3d", y+1);
+        for (int x = 0; x < size_x; x++)
+        {
+            input = fgetc(file_in);
+            if (input == '\n')
+            {
+                x--;
+                continue;
+            }
+            if (input == '0')       // Print sea with cyan background and bold 0's
+                printf("\033[46;1m%-3c\033[0m", input);
+            else if (input >= 'A')  // Print players as red bold text
+                printf("\033[31;1m%-3c\033[0m", input);
+            else                    // Print land as green text
+                printf("\033[32m%-3c\033[0m", input);
+            /* printf("%-3c", input); */
+        }
+        printf("\n");
+    }
 }
 
 void save_board(char *board, int size_x, int size_y)
