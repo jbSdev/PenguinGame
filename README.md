@@ -1,6 +1,7 @@
 # Penguin Game
 
 Game made by Antoni Jesień, Aleksander Jędrzejowski and Balcı Ali Çağan
+Moved to the Uni's GitLab server
 
 ----
 
