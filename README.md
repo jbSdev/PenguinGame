@@ -35,22 +35,22 @@ make -C build           // Compiles the project into `game` file
 ##### Board
  - [x] Basic board generation
  - [x] Fish spawning
- - [ ] Updating the board after player moves
+ - [x] Updating the board after player moves
  - [ ] Allowing user to tinker with internal values
 
 ##### Placement
- - [ ] Placing the player
- - [ ] Finding the best possible place to start the game - various tactics
- - [ ] Incorporating those tactics into one plan
+ - [x] Placing the player
+ - [x] Finding the best possible place to start the game - various tactics
+ - [x] Incorporating those tactics into one plan
 
 ##### Movement
- - [ ] Moving the player and updating the board
- - [ ] Finding the best possible moves - various tactics
- - [ ] Following those tactics through the game
+ - [x] Moving the player and updating the board
+ - [x] Finding the best possible moves - various tactics
+ - [x] Following those tactics through the game
 
 ##### GUI
- - [ ] Visualise the look of UI
- - [ ] Simple & basic prototype
+ - [x] Visualise the look of UI
+ - [x] Simple & basic prototype
  - [ ] Incorporating all of the tinkering features into UI
 
 **Additionally:**
